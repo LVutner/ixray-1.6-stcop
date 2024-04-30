@@ -68,6 +68,7 @@ protected:
 
 	float					fOneShotTime;
 	float					fModeShotTime;
+	bool					bCycleDown;
 
 	Fvector4				fvHitPower;
 	Fvector4				fvHitPowerCritical;
