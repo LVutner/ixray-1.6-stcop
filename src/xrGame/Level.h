@@ -55,7 +55,9 @@ namespace file_transfer
 	class client_site;
 }; //namespace file_transfer
 
-class CLevel					: public IGame_Level, public IPureClient
+class CLevel : 
+	public IGame_Level, 
+	public IPureClient
 {
 	#include "Level_network_Demo.h"
 	void						ClearAllObjects			();
@@ -333,7 +335,7 @@ public:
 	
 	//возвращает время в милисекундах относительно начала игры
 	ALife::_TIME_ID		GetStartGameTime		();
-	ALife::_TIME_ID		GetGameTime				();
+	virtual u64			GetGameTime() override;
 	//возвращает время для энвайронмента в милисекундах относительно начала игры
 	ALife::_TIME_ID		GetEnvironmentGameTime	();
 	//игровое время в отформатированном виде

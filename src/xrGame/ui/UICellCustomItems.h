@@ -3,7 +3,7 @@
 #include "../Weapon.h"
 
 
-class CUIInventoryCellItem :public CUICellItem
+class UI_API CUIInventoryCellItem :public CUICellItem
 {
 	typedef  CUICellItem	inherited;
 public:
@@ -18,7 +18,7 @@ public:
 				CInventoryItem* object						() {return (CInventoryItem*)m_pData;}
 };
 
-class CUIAmmoCellItem :public CUIInventoryCellItem
+class UI_API CUIAmmoCellItem :public CUIInventoryCellItem
 {
 	typedef  CUIInventoryCellItem	inherited;
 protected:
@@ -32,7 +32,7 @@ public:
 				CWeaponAmmo*	 object						() {return (CWeaponAmmo*)m_pData;}
 };
 
-class CUIWeaponCellItem :public CUIInventoryCellItem
+class UI_API CUIWeaponCellItem :public CUIInventoryCellItem
 {
 	typedef  CUIInventoryCellItem	inherited;
 public:
@@ -62,7 +62,7 @@ public:
 	CUIStatic*					get_addon_static			(u32 idx)				{return m_addons[idx];}
 };
 
-class CBuyItemCustomDrawCell :public ICustomDrawCellItem
+class UI_API CBuyItemCustomDrawCell :public ICustomDrawCellItem
 {
 	CGameFont*			m_pFont;
 	string16			m_string;

@@ -99,6 +99,7 @@ public:
 
 	virtual	shared_str			OpenDemoFile			(LPCSTR demo_file_name) = 0;
 	virtual void				net_StartPlayDemo		() = 0;
+	virtual u64					GetGameTime				() = 0;
 
 	// Main interface
 	CObject*					CurrentEntity			( void ) const							{ return pCurrentEntity;				}

@@ -94,7 +94,6 @@ static Fvector	vFootCenter;
 static Fvector	vFootExt;
 
 Flags32			psActorFlags={AF_GODMODE_RT|AF_AUTOPICKUP|AF_RUN_BACKWARD|AF_IMPORTANT_SAVE};
-int				psActorSleepTime = 1;
 
 
 

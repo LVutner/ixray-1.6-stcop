@@ -12,3 +12,5 @@ public:
 };
 
 extern ENGINE_API IGame_Actor* g_pIGameActor;
+
+extern ENGINE_API int psActorSleepTime;
