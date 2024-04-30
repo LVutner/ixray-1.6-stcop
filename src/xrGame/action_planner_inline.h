@@ -114,8 +114,8 @@ void CPlanner::update				()
 	{
 		//Attempt to workaround strange line 114 crash when loading generators
 //#pragma TODO("OldSerpskiStalker. Hack for l13_Generators")
-		if (!this->solution().empty())
-		{
+		//if (!this->solution().empty())
+		//{
 			if (initialized()) 
 			{
 				if (current_action_id() != this->solution().front()) 
@@ -133,7 +133,7 @@ void CPlanner::update				()
 			}
 
 			current_action().execute();
-		}
+		//}
 		//END
 	}
 }
