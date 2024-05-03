@@ -650,10 +650,9 @@ CRenderTarget::CRenderTarget		()
 
 		DxgiFormat fmt = DxgiFormat::DXGI_FORMAT_R32_FLOAT;
 		rt_half_depth.create(r2_RT_half_depth, w, h, fmt);
-
-		s_ssao.create(b_ssao, "r2\\ssao");
 	}
-
+	// TODO: Drombeys to Hozar_2002: watch this moment
+	s_ssao.create(b_ssao, "r2\\ssao");
 	rt_ssao_temp.create(r2_RT_ssao_temp, s_dwWidth, s_dwHeight, DxgiFormat::DXGI_FORMAT_R16_FLOAT, 1, true);
 
 	if(RFeatureLevel >= D3D_FEATURE_LEVEL_11_0) {
