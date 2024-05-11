@@ -774,10 +774,10 @@ public:
 
 	virtual void Execute				(LPCSTR args)
 	{
-		if (!ai().get_level_graph())
+		if (!ai().get_level_graph()|| dynamic_cast<CLevelGraph*>(&ai().level_graph()))
 			return;
 
-		ai().level_graph().setup_current_level	(-1);
+		dynamic_cast<CLevelGraph*>(&ai().level_graph())->setup_current_level	(-1);
 	}
 };
 
@@ -790,10 +790,10 @@ public:
 
 	virtual void Execute					(LPCSTR args)
 	{
-		if (!ai().get_level_graph())
+		if (!ai().get_level_graph()|| dynamic_cast<CLevelGraph*>(&ai().level_graph()) == nullptr)
 			return;
 
-		ai().level_graph().setup_current_level	(
+		dynamic_cast<CLevelGraph*>(&ai().level_graph())->setup_current_level	(
 			ai().level_graph().level_id()
 		);
 	}
@@ -807,11 +807,11 @@ public:
 
 	virtual void Execute					(LPCSTR args)
 	{
-		if (!ai().get_level_graph())
+		if (!ai().get_level_graph()|| dynamic_cast<CLevelGraph*>(&ai().level_graph()) == nullptr)
 			return;
 
 		if (!*args) {
-			ai().level_graph().setup_current_level	(-1);
+			dynamic_cast<CLevelGraph*>(&ai().level_graph())->setup_current_level	(-1);
 			return;
 		}
 
@@ -821,7 +821,7 @@ public:
 			return;
 		}
 
-		ai().level_graph().setup_current_level	(level->id());
+		dynamic_cast<CLevelGraph*>(&ai().level_graph())->setup_current_level	(level->id());
 	}
 };
 
@@ -1284,6 +1284,14 @@ public:
 		if( EQ(args,"off")||EQ(args,"0") )
 			bWhatToDo = FALSE;
 
+		if (Device.IsEditorMode())
+		{
+			if (bWhatToDo)
+			{
+				EditorScene->Stop();
+			}
+			return;
+		}
 		MainMenu()->Activate( bWhatToDo );
 	}
 };
