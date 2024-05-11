@@ -439,6 +439,9 @@ void CEnvironment::SelectEnvs(EnvVec* envs, CEnvDescriptor*& e0, CEnvDescriptor*
 
 void CEnvironment::SelectEnvs(float gt)
 {
+	if (CurrentWeather == nullptr)
+		return;
+
 	VERIFY				(CurrentWeather);
     if ((Current[0]==Current[1])&&(Current[0]==0)){
 		VERIFY			(!bWFX);
@@ -470,8 +473,10 @@ void CEnvironment::lerp		(float& current_weight)
 {
 	if (bWFX&&(wfx_time<=0.f)) StopWFX();
 
-	SelectEnvs				(fGameTime);
-    VERIFY					(Current[0]&&Current[1]);
+	SelectEnvs(fGameTime);
+
+	if (Current[0] == nullptr || Current[1] == nullptr)
+		return;
 
 	current_weight			= TimeWeight(fGameTime,Current[0]->exec_time,Current[1]->exec_time);
 	// modifiers
@@ -495,6 +500,8 @@ void CEnvironment::lerp		(float& current_weight)
 
 void CEnvironment::OnFrame()
 {
+	if (CurrentEnv == nullptr)
+		return;
 
 #ifdef _EDITOR
 	SetGameTime				(fGameTime+Device.fTimeDelta*fTimeFactor,fTimeFactor);
