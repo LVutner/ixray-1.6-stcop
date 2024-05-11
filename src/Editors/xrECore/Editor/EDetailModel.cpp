@@ -22,7 +22,8 @@ void EDetail::EVertexIn::remapUV(const fvfVertexIn& src, const Fvector2& offs, c
 	ImageLib.MergedTextureRemapUV(u,v,src.u,src.v, offs, scale, bRotate);
 }
 
-EDetail::EDetail(bool lib)
+EDetail::EDetail(bool lib) :
+	m_bLoadFromLibrary(lib)
 {
 	shader				= 0;
 	m_Flags.zero		();
