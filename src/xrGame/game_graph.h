@@ -22,6 +22,3 @@ public:
 	virtual void set_current_level(u32 const level_id);
 	DECLARE_SCRIPT_REGISTER_FUNCTION
 };
-add_to_type_list(CGameGraph)
-#undef script_type_list
-#define script_type_list save_type_list(CGameGraph)

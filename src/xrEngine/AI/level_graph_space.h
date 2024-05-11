@@ -33,13 +33,7 @@ namespace LevelGraph
 	typedef NodePosition	CPosition;
 
 	class CVertex : 
-		
-#ifndef MASTER_GOLD
-		public
-#else
-		private
-#endif
-		NodeCompressed 
+		public NodeCompressed 
 	{
 	private:
 		friend class CRenumbererConverter;
