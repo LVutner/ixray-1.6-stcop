@@ -166,7 +166,7 @@ void CCustomDetector::ToggleDetector(bool bFastMode)
 		{
 			u32 state = wpn->GetState();
 
-			if (state == CWeapon::eEmptyClick || state == CWeapon::eShowing || state == CWeapon::eCheckMisfire || state == CWeapon::eFire || state == CWeapon::eFire2 || (state == CWeapon::eSwitchMode && !wpn->GetAmmoElapsed() == 0))
+			if (state == CWeapon::eEmptyClick || state == CWeapon::eShowing || state == CWeapon::eCheckMisfire || state == CWeapon::eFire || state == CWeapon::eFire2 || (state == CWeapon::eSwitchMode && wpn->GetAmmoElapsed() != 0))
 				return;
 		}
 
