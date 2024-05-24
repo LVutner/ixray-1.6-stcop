@@ -916,7 +916,7 @@
 		<text>Unikalny pseudonim jest za d³ugi. Nie mo¿na wprowadziæ wiêcej ni¿ 30 znaków.</text>
 	</string>
 	<string id="mp_gp_unique_nick_must_contain_only">
-		<text>Unikalne imiê mo¿e zawieraæ tylko cyfry, litery alfabetu ³ac. i symbole spec.: "#$&'()*+-./:;<=>?@[]^_`{|}~ </text>
+		<text>Unikalne imiê mo¿e zawieraæ tylko cyfry, litery alfabetu ³ac. i symbole spec.</text>
 	</string>
 	<string id="mp_gp_unique_nick_must_contain_nospaces">
 		<text>Unikalny pseudonim nie mo¿e zawieraæ spacji</text>

@@ -916,7 +916,7 @@
 		<text>Il soprannome è troppo lungo, non può superare i 30 caratteri.</text>
 	</string>
 	<string id="mp_gp_unique_nick_must_contain_only">
-		<text>Il soprannome può contenere solo numeri, lettere dell'alfabeto latino e i seguenti caratteri speciali: "#$&'()*+-./:;<=>?@[]^_`{|}~</text>
+		<text>Il soprannome può contenere solo numeri, lettere dell'alfabeto latino e i seguenti caratteri speciali</text>
 	</string>
 	<string id="mp_gp_unique_nick_must_contain_nospaces">
 		<text>Il soprannome non può contenere degli spazi.</text>

@@ -916,7 +916,7 @@
 		<text>El apodo es demasiado largo. No puede contener más de 30 caracteres.</text>
 	</string>
 	<string id="mp_gp_unique_nick_must_contain_only">
-		<text>El apodo solo puede contener números, letras del alfabeto latino y los siguientes símbolos especiales: "#$&'()*+-./:;<=>?@[]^_`{|}~</text>
+		<text>El apodo solo puede contener números, letras del alfabeto latino y los siguientes símbolos especiales</text>
 	</string>
 	<string id="mp_gp_unique_nick_must_contain_nospaces">
 		<text>El apodo no puede contener espacios.</text>
