@@ -916,7 +916,7 @@
 		<text>Pøezdívka je pøíliš dlouhá. Nemùžeš zadat více než 30 znakù.</text>
 	</string>
 	<string id="mp_gp_unique_nick_must_contain_only">
-		<text>Pøezdívka smí obsahovat pouze èísla, písmena latinské abecedy a následující speciální symboly: "#$&'()*+-./:;<=>?@[]^_`{|}~</text>
+		<text>Pøezdívka smí obsahovat pouze èísla, písmena latinské abecedy a následující speciální symboly</text>
 	</string>
 	<string id="mp_gp_unique_nick_must_contain_nospaces">
 		<text>Pøezdívka nesmí obsahovat mezery</text>
