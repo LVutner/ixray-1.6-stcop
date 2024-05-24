@@ -718,7 +718,7 @@
 		<text>dans une explosion</text>
 	</string>
 	<string id="ui_st_eye_kills_in_row">
-		<text>dans l'ÿil</text>
+		<text>dans l'œil</text>
 	</string>
 	<string id="ui_st_headshots_in_row">
 		<text>dans la tête</text>
@@ -916,7 +916,7 @@
 		<text>Ce pseudo unique est trop long. Vous ne pouvez saisir que 30 caractères au maximum.</text>
 	</string>
 	<string id="mp_gp_unique_nick_must_contain_only">
-		<text>Le pseudo unique ne peut contenir que des chiffres, des lettres et les symboles suivants</text>
+		<text>Le pseudo unique ne peut contenir que des chiffres, des lettres et les symboles suivants : "#$&'()*+-./:;<=>?@[]^_`{|}~</text>
 	</string>
 	<string id="mp_gp_unique_nick_must_contain_nospaces">
 		<text>Le pseudo unique ne doit contenir aucun espace</text>

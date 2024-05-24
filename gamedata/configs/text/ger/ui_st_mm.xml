@@ -916,7 +916,7 @@
 		<text>Der eindeutige Name ist zu lang. Er darf nicht länger als 30 Zeichen sein.</text>
 	</string>
 	<string id="mp_gp_unique_nick_must_contain_only">
-		<text>Der eindeutige Name darf Ziffern, lateinische Buchstaben und die folgenden Sonderzeichen enthalten</text>
+		<text>Der eindeutige Name darf Ziffern, lateinische Buchstaben und die folgenden Sonderzeichen enthalten: "#$&'()*+-./:;<=>?@[]^_`{|}~</text>
 	</string>
 	<string id="mp_gp_unique_nick_must_contain_nospaces">
 		<text>Der eindeutige Name darf keine Leerzeichen enthalten.</text>
