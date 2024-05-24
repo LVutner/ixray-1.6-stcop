@@ -1202,7 +1202,7 @@ void CActor::UpdateCL	()
 			auto& Constants = g_pGamePersistent->m_pGShaderConstants;
 			Constants->hud_params.x = pWeapon->GetZRotatingFactor();
 			Constants->hud_params.y = pWeapon->GetSecondVPZoomFactor();
-			Constants->hud_params.z = pWeapon->m_nearwall_last_hud_fov;
+			Constants->hud_params.z = pWeapon->GetHudFov();
 			Constants->hud_params.w = Device.m_SecondViewport.IsSVPFrame();
 		}
 	}
