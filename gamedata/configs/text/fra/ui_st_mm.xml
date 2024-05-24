@@ -916,7 +916,7 @@
 		<text>Ce pseudo unique est trop long. Vous ne pouvez saisir que 30 caractères au maximum.</text>
 	</string>
 	<string id="mp_gp_unique_nick_must_contain_only">
-		<text>Le pseudo unique ne peut contenir que des chiffres, des lettres et les symboles suivants : "#$&'()*+-./:;<=>?@[]^_`{|}~</text>
+		<text>Le pseudo unique ne peut contenir que des chiffres, des lettres et les symboles suivants</text>
 	</string>
 	<string id="mp_gp_unique_nick_must_contain_nospaces">
 		<text>Le pseudo unique ne doit contenir aucun espace</text>
