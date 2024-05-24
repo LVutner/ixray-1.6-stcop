@@ -307,7 +307,7 @@ void msimulator_ResolveStuck(SCollisionData& cl, Fvector& position)
 	int				stuckCount;
 	
 	float			dist;
-	float			safe_R = 1.f + EPS_L*2;//psSqueezeVelocity*EDevice->fTimeDelta;
+	float			safe_R = 1.f + EPS_L*2;//psSqueezeVelocity*EDevice.fTimeDelta;
 	
 	for (int passes=0; passes<psCollideActStuckDepth; passes++)
 	{
@@ -496,7 +496,7 @@ void ESceneAIMapTool::MotionSimulate(Fvector& result, Fvector& start, Fvector& e
                 CSurface* surf		= R->e_mesh->GetSurfaceByFaceID(R->tag);
 //.				SGameMtl* mtl 		=  GameMaterialLibrary->GetMaterialByID(surf->_GameMtl());
 //.				if (mtl->Flags.is(SGameMtl::flPassable))continue;
-                Shader_xrLC* c_sh	= EDevice->ShaderXRLC.Get(surf->_ShaderXRLCName());
+                Shader_xrLC* c_sh	= EDevice.ShaderXRLC.Get(surf->_ShaderXRLCName());
                 if (!c_sh->flags.bCollision) 			continue;
             }
             clContactedT.push_back(cl_tri());

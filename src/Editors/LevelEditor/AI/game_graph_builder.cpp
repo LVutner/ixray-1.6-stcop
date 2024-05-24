@@ -7,8 +7,8 @@
 ////////////////////////////////////////////////////////////////////////////
 
 #include "stdafx.h"
-#include "game_graph_builder.h"
 #include "level_graph.h"
+#include "game_graph_builder.h"
 #include "graph_abstract.h"
 #include "graph_vertex.h"
 #include "game_level_cross_table.h"

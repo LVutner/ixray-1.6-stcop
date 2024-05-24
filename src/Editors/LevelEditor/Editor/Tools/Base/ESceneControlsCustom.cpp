@@ -292,9 +292,9 @@ bool  TUI_CustomControl::SelectStart(TShiftState Shift)
 		}
 		else
 		{
-			m_GizmoXVector.set(EDevice->m_Camera.GetRight());
+			m_GizmoXVector.set(EDevice.m_Camera.GetRight());
 			m_GizmoXVector.y = 0;
-			m_GizmoYVector.set(EDevice->m_Camera.GetDirection());
+			m_GizmoYVector.set(EDevice.m_Camera.GetDirection());
 			m_GizmoYVector.y = 0;
 			m_GizmoXVector.normalize_safe();
 			m_GizmoYVector.normalize_safe();
@@ -353,7 +353,7 @@ void  TUI_CustomControl::SelectProcess(TShiftState _Shift)
                 else  if (LTools->GetGimzo()->GetStatus() == Gizmo::EStatus::SelectedY)
 				{
 					Fplane YPlane;  Fvector Position; Fvector StartPosition;
-                    Fvector Normal = EDevice->m_Camera.GetDirection();
+                    Fvector Normal = EDevice.m_Camera.GetDirection();
                     Normal.mul(-1);
                     Normal.y = 0;
                     Normal.normalize_safe();
@@ -423,7 +423,7 @@ void  TUI_CustomControl::SelectProcess(TShiftState _Shift)
                 else  if (LTools->GetGimzo()->GetStatus() == Gizmo::EStatus::SelectedY)
                 {
                     Fplane YPlane;  Fvector Position; Fvector StartPosition;
-                    Fvector Normal = EDevice->m_Camera.GetDirection();
+                    Fvector Normal = EDevice.m_Camera.GetDirection();
                     Normal.mul(-1);
                     Normal.y = 0;
                     Normal.normalize_safe();
@@ -438,14 +438,14 @@ void  TUI_CustomControl::SelectProcess(TShiftState _Shift)
                 else  if (LTools->GetGimzo()->GetStatus() == Gizmo::EStatus::SelectedXYZ)
                 {
 					Fplane XYZPlane;  Fvector Position; Fvector StartPosition;
-					Fvector Normal = EDevice->m_Camera.GetDirection();
+					Fvector Normal = EDevice.m_Camera.GetDirection();
                     Normal.mul(-1);
 					Normal.normalize_safe();
                     XYZPlane.build_unit_normal(LTools->GetGimzo()->GetStartPosition(), Normal);
 					if (XYZPlane.intersectRayPoint(UI->m_StartRStart, UI->m_StartRDir, StartPosition) && XYZPlane.intersectRayPoint(UI->m_CurrentRStart, UI->m_CurrentRDir, Position))
 					{
-						EDevice->mView.transform(Position);
-						EDevice->mView.transform(StartPosition);
+						EDevice.mView.transform(Position);
+						EDevice.mView.transform(StartPosition);
 						
 						Fvector Delta;
                         Delta.set(1, 1, 1).mul(((Position.x - StartPosition.x) + (Position.y - StartPosition.y) + (Position.z - StartPosition.z)) * 0.7f);

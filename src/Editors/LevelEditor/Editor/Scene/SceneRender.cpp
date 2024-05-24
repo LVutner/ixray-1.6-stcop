@@ -35,7 +35,7 @@ void  object_StrictB2F_3(EScene::mapObject_Node *N){RENDER_OBJECT(3,true);}
 		SceneMToolsIt s_it 	= scene_tools.begin();\
 		SceneMToolsIt s_end	= scene_tools.end();\
         for (; s_it!=s_end; s_it++){\
-            EDevice->SetShader		(B?EDevice->m_SelectionShader:EDevice->m_WireShader);\
+            EDevice.SetShader		(B?EDevice.m_SelectionShader:EDevice.m_WireShader);\
             RCache.set_xform_world	(Fidentity);\
             try{\
             	(*s_it)->OnRenderRoot(P,B);\
@@ -56,9 +56,9 @@ void EScene::RenderSky(const Fmatrix& camera)
         st_Environment& E = m_LevelOp.m_Envs[m_LevelOp.m_CurEnv];
         m_SkyDome->GetPosition() = camera.c;
         m_SkyDome->UpdateTransform(true);
-		EDevice->SetRS(D3DRS_TEXTUREFACTOR, E.m_SkyColor.get());
+		EDevice.SetRS(D3DRS_TEXTUREFACTOR, E.m_SkyColor.get());
     	m_SkyDome->RenderSingle();
-	    EDevice->SetRS(D3DRS_TEXTUREFACTOR,	0xffffffff);
+	    EDevice.SetRS(D3DRS_TEXTUREFACTOR,	0xffffffff);
     }
 */
 }
@@ -109,7 +109,7 @@ void EScene::Render( const Fmatrix& camera )
             ObjectIt o_end 	= lst.end();
             for(;o_it!=o_end;o_it++){
                 if( (*o_it)->Visible()&& (*o_it)->IsRender() ){
-                    float distSQ = EDevice->vCameraPosition.distance_to_sqr((*o_it)->FPosition);
+                    float distSQ = EDevice.vCameraPosition.distance_to_sqr((*o_it)->FPosition);
                     mapRenderObjects.insertInAnyWay(distSQ,*o_it);
                 }
             }

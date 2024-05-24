@@ -201,10 +201,10 @@ void Gizmo::OnFrame()
         m_RotateMatrix.identity();
         Box.getcenter(m_Position);
     }
-    Fvector ViewNormal = EDevice->m_Camera.GetPosition();
+    Fvector ViewNormal = EDevice.m_Camera.GetPosition();
     ViewNormal.sub(m_Position);
     ViewNormal.normalize_safe();
-    Fvector CameraRight = EDevice->m_Camera.GetDirection();
+    Fvector CameraRight = EDevice.m_Camera.GetDirection();
 
     m_bVisible =  SelectedCount > 0;
     float DotProduct = CameraRight.dotproduct(ViewNormal);
@@ -227,7 +227,7 @@ void Gizmo::OnFrame()
         pt.x = UI->GetRenderWidth() * ((ScreenPosition.x + 1) / 2);
         pt.y = UI->GetRenderHeight() * (1.f - ((ScreenPosition.y + 1) / 2));
 
-        EDevice->m_Camera.MouseRayFromPoint(m_ScreenPosition, dir, pt);
+        EDevice.m_Camera.MouseRayFromPoint(m_ScreenPosition, dir, pt);
         m_ScreenPosition.mad(dir, _kl);
     }
 

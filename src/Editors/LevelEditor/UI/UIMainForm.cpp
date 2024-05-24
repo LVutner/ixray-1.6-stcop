@@ -34,18 +34,18 @@ UIMainForm::UIMainForm()
         m_WorldProperties->Close();
 	}
 
-    m_tMenu = EDevice->Resources->_CreateTexture("ed\\bar\\menu");
-    m_tSelect = EDevice->Resources->_CreateTexture("ed\\bar\\select");
-    m_tAdd = EDevice->Resources->_CreateTexture("ed\\bar\\add");
-    m_tMove = EDevice->Resources->_CreateTexture("ed\\bar\\move");
-    m_tScale = EDevice->Resources->_CreateTexture("ed\\bar\\scale");
-    m_tRotate = EDevice->Resources->_CreateTexture("ed\\bar\\rotate");
-    m_tNSnap = EDevice->Resources->_CreateTexture("ed\\bar\\nsnap");
-    m_tZoomSel = EDevice->Resources->_CreateTexture("ed\\bar\\zoomsel");
+    m_tMenu = EDevice.Resources->_CreateTexture("ed\\bar\\menu");
+    m_tSelect = EDevice.Resources->_CreateTexture("ed\\bar\\select");
+    m_tAdd = EDevice.Resources->_CreateTexture("ed\\bar\\add");
+    m_tMove = EDevice.Resources->_CreateTexture("ed\\bar\\move");
+    m_tScale = EDevice.Resources->_CreateTexture("ed\\bar\\scale");
+    m_tRotate = EDevice.Resources->_CreateTexture("ed\\bar\\rotate");
+    m_tNSnap = EDevice.Resources->_CreateTexture("ed\\bar\\nsnap");
+    m_tZoomSel = EDevice.Resources->_CreateTexture("ed\\bar\\zoomsel");
 
-    m_tGrid = EDevice->Resources->_CreateTexture("ed\\bar\\grid");
-    m_tScaleGrid = EDevice->Resources->_CreateTexture("ed\\bar\\scale_grid");
-    m_tAngle = EDevice->Resources->_CreateTexture("ed\\bar\\angle");
+    m_tGrid = EDevice.Resources->_CreateTexture("ed\\bar\\grid");
+    m_tScaleGrid = EDevice.Resources->_CreateTexture("ed\\bar\\scale_grid");
+    m_tAngle = EDevice.Resources->_CreateTexture("ed\\bar\\angle");
 
     LTools->GetGimzo()->SetStep(Gizmo::EType::Move, 0.1f);
     LTools->GetGimzo()->SetStep(Gizmo::EType::Scale, 0.1f);
@@ -250,20 +250,20 @@ void UIMainForm::DrawRenderToolBar(ImVec2 Size)
 					}
 					if (ImGui::BeginMenu("Fill Mode"))
 					{
-						bool selected[3] = { EDevice->dwFillMode == D3DFILL_POINT,EDevice->dwFillMode == D3DFILL_WIREFRAME,EDevice->dwFillMode == D3DFILL_SOLID };
+						bool selected[3] = { EDevice.dwFillMode == D3DFILL_POINT,EDevice.dwFillMode == D3DFILL_WIREFRAME,EDevice.dwFillMode == D3DFILL_SOLID };
 						if (ImGui::MenuItem("Point", "", &selected[0]))
 						{
-							EDevice->dwFillMode = D3DFILL_POINT;
+							EDevice.dwFillMode = D3DFILL_POINT;
 							UI->RedrawScene();
 						}
 						if (ImGui::MenuItem("Wireframe", "", &selected[1]))
 						{
-							EDevice->dwFillMode = D3DFILL_WIREFRAME;
+							EDevice.dwFillMode = D3DFILL_WIREFRAME;
 							UI->RedrawScene();
 						}
 						if (ImGui::MenuItem("Solid", "", &selected[2]))
 						{
-							EDevice->dwFillMode = D3DFILL_SOLID;
+							EDevice.dwFillMode = D3DFILL_SOLID;
 							UI->RedrawScene();
 						}
 						ImGui::EndMenu();

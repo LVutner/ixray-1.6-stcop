@@ -2,6 +2,8 @@
 #include "../../xrScripts/stdafx.h"
 #include "../XrECore/stdafx.h"
 
+#include "../xrEngine/xrLevel.h"
+
 #include "../XrECore/Editor/device.h"
 #include "../XrECore/Editor/UI_MainCommand.h"
 #include "../XrECore/Editor/UI_ToolsCustom.h"
