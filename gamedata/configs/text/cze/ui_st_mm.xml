@@ -846,8 +846,8 @@
 	<string id="ui_mm_hdao">
 		<text>HDAO</text>
 	</string>
-	<string id="ui_mm_hbao">
-		<text>HBAO</text>
+	<string id="ui_mm_gtao">
+		<text>GTAO</text>
 	</string>
 	<string id="ui_st_disable_hud">
 		<text>Zobrazit rozhraní</text>
