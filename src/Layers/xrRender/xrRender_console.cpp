@@ -39,7 +39,7 @@ xr_token							qssao_mode_token						[ ]={
 	{ "disabled",					0											},
 	{ "default",					1											},
 	{ "hdao",						2											},
-	{ "hbao",						3											},
+	{ "gtao",						3											},
 	{ 0,							0											}
 };
 
